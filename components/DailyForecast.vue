@@ -5,20 +5,20 @@
         </h2>
         <div class="space-y-3">
             <div v-for="day in forecast" :key="day.date"
-                class="flex justify-between items-center bg-gray-50 dark:bg-gray-800 px-4 py-3 rounded-lg shadow-sm transition-colors">
+                class="flex justify-between items-center bg-gray-50  px-4 py-3 rounded-lg shadow-sm transition-colors">
                 <div class="flex items-center gap-3">
                     <img :src="`https://openweathermap.org/img/wn/${day.icon}@2x.png`" class="w-8 h-8"
                         :alt="day.description" />
                     <div>
-                        <div class="font-medium text-gray-800 dark:text-gray-200">
+                        <div class="font-medium text-gray-800">
                             {{ formatDate(day.date) }}
                         </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400 capitalize">
+                        <div class="text-sm text-gray-500 capitalize">
                             {{ day.description }}
                         </div>
                     </div>
                 </div>
-                <div class="text-sm text-right text-gray-700 dark:text-gray-200">
+                <div class="text-sm text-right text-gray-700">
                     <div>High: {{ Math.round(day.temp_max) }}°F</div>
                     <div>Low: {{ Math.round(day.temp_min) }}°F</div>
                 </div>
